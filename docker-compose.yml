@@ -6,7 +6,7 @@ services:
     environment:
       - APP_PROFILE=docked
     ports:
-      - '8083:8083'
+      - '8079:8079'
     networks:
       - connect_proxy_network
 
