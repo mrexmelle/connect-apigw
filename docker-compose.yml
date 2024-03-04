@@ -1,0 +1,16 @@
+version: '3.8'
+services:
+  apigw:
+    container_name: connect-apigw-core
+    image: ghcr.io/mrexmelle/connect-apigw:0.1.0
+    environment:
+      - APP_PROFILE=docked
+    ports:
+      - '8083:8083'
+    networks:
+      - connect_proxy_network
+
+networks:
+  connect_proxy_network:
+      name: connect-network
+      external: true
